@@ -1,4 +1,4 @@
-let button = document.querySelector("button");
+let button = document.querySelector("#cadastrar-paciente");
 
 button.addEventListener("click", (event) =>{
 
@@ -6,9 +6,7 @@ button.addEventListener("click", (event) =>{
 
     let form = document.querySelector("#myForm");
 
-    let paciente = getInfoForm(form);
-
-    let pacienteTr = criarTr(paciente);
+    let paciente = getInfoForm(form);    
 
     let erros = validaPaciente(paciente);
 
@@ -17,14 +15,19 @@ button.addEventListener("click", (event) =>{
         return;
     }
 
-    let tabela = document.querySelector("#tabela-pacientes");
-
-    tabela.appendChild(pacienteTr);
+    adicionaPacienteNaTabela(paciente)
 
     form.reset();
     let mensagemErros = document.querySelector("#mensagens-erro");
     mensagemErros.innerHTML = ""
 });
+
+function adicionaPacienteNaTabela(paciente){
+    let pacienteTr = criarTr(paciente);
+    let tabela = document.querySelector("#tabela-pacientes");
+
+    tabela.appendChild(pacienteTr);
+}
 
 function exibirMensagemErro(erros){
     let ul = document.querySelector("#mensagens-erro");

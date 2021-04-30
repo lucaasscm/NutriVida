@@ -171,3 +171,18 @@ form h1 {
 form input {
 	width: 50%;
 }
+
+.fadeOut {
+	opacity: 0;
+	transition: 0.5s;
+}
+
+#filtro-tabela {
+	width: 200px;
+	height: 25px;
+	margin-bottom: 10px;
+}
+
+.esconder {
+	display: none;
+}

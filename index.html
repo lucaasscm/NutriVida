@@ -18,6 +18,8 @@
 		<main>
 			<section class="container">
 				<h2>Meus pacientes</h2>
+				<label for="filtro-tabela">Filtrar:</label>
+				<input type="text" name="filtro-tabela" id="filtro-tabela" placeholder="Digite o nome do paciente">
 				<table>
 					<thead>
 						<tr>
@@ -69,8 +71,11 @@
 						</tr>
 					</tbody>
 				</table>
-
+				<span class="esconder" id="erro-ajax">Erro ao buscar pacientes</span>
+				<button id="buscar-pacientes">Inserir pacientes</button>
 			</section>
+				
+
 
 			<section class="form-cadastro">
 				<form id="myForm" >
@@ -82,7 +87,7 @@
 					</ul>	
 					<div class="input-nome" required>
 					<label for="name">Nome</label>
-					<input type="text" name="name" id="name">
+					<input type="text" name="name" id="name" placeholder="Digite seu nome:">
 					</div>
 
 					<div class="input-peso">
@@ -100,7 +105,7 @@
 					<input type="number" name="fat" id="fat" placeholder="% Gordura">
 					</div>
 
-					<button>Cadastrar</button>
+					<button id="cadastrar-paciente">Cadastrar</button>
 					</div>
 				</form>
 			</section>
@@ -108,5 +113,8 @@
 
 		<script src="./js/calcula-imc.js"></script>
 		<script src="./js/form.js"></script>
+		<script src="./js/remover-paciente.js"></script>
+		<script src="./js/filtrar.js"></script>
+		<script src="./js/buscar-pacientes.js"></script>
 	</body>
 </html>
