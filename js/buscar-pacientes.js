@@ -3,7 +3,7 @@ let buscarButton = document.querySelector("#buscar-pacientes");
 buscarButton.addEventListener("click", () => {
     let xhr = new XMLHttpRequest();
 
-    xhr.open("GET", "http://api-pacientes.herokuapp.om/pacientes");
+    xhr.open("GET", "http://api-pacientes.herokuapp.com/pacientes");
 
     xhr.addEventListener("load", () =>{
         let resposta = xhr.responseText;
